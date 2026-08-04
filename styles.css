@@ -42,6 +42,7 @@ html {
   border-radius: 15px;
   corner-shape: squircle;
   font-family: "Inter";
+  border: none;
   /* transition: all 0.2s; */
 }
 
@@ -49,6 +50,7 @@ html {
   background-color: white;
   color: black;
   border: 2px black solid;
+  cursor: pointer;
 }
 
 .secondary-btn {
@@ -246,12 +248,12 @@ nav {
   width: 90%;
 
   h1 {
-    font-family: 'Funnel Sans';
+    font-family: "Funnel Sans";
     margin-bottom: 0;
   }
 
-  p{
-    font-family: 'KoHo';
+  p {
+    font-family: "KoHo";
   }
 
   .skills-holder {
@@ -281,6 +283,140 @@ nav {
         align-items: center;
         justify-content: center;
         padding: 5px;
+      }
+    }
+  }
+}
+
+.contact-section {
+  margin-top: 4rem;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1 {
+    font-family: "Funnel Sans";
+    margin-bottom: 0%;
+  }
+
+  p {
+    font-family: "KoHo";
+  }
+
+  .contact-holder {
+    display: flex;
+    gap: 2rem;
+
+    .message-holder {
+      h2{
+        font-family: 'Raleway';
+        margin-bottom: 0;
+      }
+      .contact-form {
+        display: flex;
+        flex-direction: column;
+
+        input {
+          border: none;
+          box-shadow:
+            rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+            rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+          corner-shape: squircle;
+          border-radius: 5px;
+          height: 2rem;
+        }
+
+        .name-email-holder {
+          display: flex;
+          gap: 1rem;
+
+          .label-input-holder {
+            display: flex;
+            flex-direction: column;
+          }
+        }
+
+        label {
+          margin-top: 10px;
+          font-family: "Inter";
+          font-size: 0.8rem;
+        }
+
+        textarea{
+          height: 4rem;
+          font-family: 'Inter';
+          margin-bottom: 1.5rem;
+          border: none;
+          box-shadow:
+            rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+            rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+          corner-shape: squircle;
+          border-radius: 5px;
+        }
+      }
+    }
+
+    .social-holder {
+      display: flex;
+      flex-direction: column;
+
+      h2 {
+        font-family: "Raleway";
+        margin-bottom: 0%;
+      }
+
+      .email-holder,
+      .phone-holder {
+        display: flex;
+        align-items: center;
+        border: 1px solid black;
+        corner-shape: squircle;
+        border-radius: 15px;
+        gap: 1rem;
+        padding: 10px;
+        margin-top: 1rem;
+
+        .icon-holder {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .info-holder {
+          display: flex;
+          flex-direction: column;
+
+          p {
+            margin: 0;
+            /* font-family: 'Inter'; */
+          }
+        }
+      }
+
+      h3 {
+        font-family: "Funnel Sans";
+      }
+
+      .links-holder {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        a {
+          text-decoration: none;
+          box-shadow:
+            rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+            rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+          padding: 10px;
+          border-radius: 50px;
+          color: black;
+        }
+
+        a:hover {
+          background-color: black;
+          color: white;
+        }
       }
     }
   }
@@ -352,9 +488,38 @@ nav {
   }
 
   /* skills section  */
-  .skills-section{
-    .skills-holder{
+  .skills-section {
+    .skills-holder {
       width: 90%;
+    }
+  }
+
+  /* contact-section  */
+  .contact-section{
+    width: 95%;
+
+    .contact-holder{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+
+      .message-holder{
+        width: 100%;
+
+        .contact-form{
+          input{
+            margin-top: 5px;
+          }
+          textarea{
+            margin-top: 5px;
+          }
+          .name-email-holder{
+            display: flex;
+            flex-direction: column;
+          }
+        }
+      }
     }
   }
 }
