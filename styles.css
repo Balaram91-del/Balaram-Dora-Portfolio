@@ -66,7 +66,7 @@ html {
   color: white;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
@@ -202,24 +202,24 @@ nav {
         border-radius: 15px;
       }
 
-      h2{
-        font-family: 'Funnel Sans';
+      h2 {
+        font-family: "Funnel Sans";
         color: black;
         font-size: 1.3rem;
       }
 
-      p{
-        font-family: 'Raleway';
+      p {
+        font-family: "Raleway";
         color: black;
         font-size: 0.9rem;
       }
 
-      .tags-holder{
+      .tags-holder {
         display: flex;
         flex-wrap: wrap;
         gap: 10px;
 
-        p{
+        p {
           padding: 5px;
           corner-shape: squircle;
           border-radius: 10px;
@@ -230,8 +230,58 @@ nav {
       }
     }
 
-    .project:hover{
+    .project:hover {
       transform: translateY(-20px);
+    }
+  }
+}
+
+/* skills section  */
+.skills-section {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+
+  h1 {
+    font-family: 'Funnel Sans';
+    margin-bottom: 0;
+  }
+
+  p{
+    font-family: 'KoHo';
+  }
+
+  .skills-holder {
+    width: 70%;
+    border-left: black solid 3px;
+    margin-top: 2rem;
+
+    h3 {
+      font-family: "Raleway";
+    }
+
+    .specific-skills-container {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1rem;
+      /* justify-content: center; */
+
+      div {
+        box-shadow:
+          rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+          rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+        corner-shape: squircle;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5px;
+      }
     }
   }
 }
@@ -298,6 +348,13 @@ nav {
     padding-bottom: 15px;
     menu {
       display: none;
+    }
+  }
+
+  /* skills section  */
+  .skills-section{
+    .skills-holder{
+      width: 90%;
     }
   }
 }
