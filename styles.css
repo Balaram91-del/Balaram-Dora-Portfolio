@@ -18,6 +18,21 @@ body {
   --dark-gray-color: #ededed;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 8px; /* or any width you want */
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+::-webkit-scrollbar-thumb {
+  background-color: black;
+  border-radius: 10px; /* optional for rounded look */
+}
+
 /* utility classes */
 .primary-btn {
   background-color: black;
@@ -27,6 +42,7 @@ body {
   border-radius: 15px;
   corner-shape: squircle;
   font-family: "Inter";
+  /* transition: all 0.2s; */
 }
 
 .primary-btn:hover {
@@ -50,6 +66,10 @@ body {
   color: white;
 }
 
+a{
+  text-decoration: none;
+}
+
 nav {
   width: 100%;
   display: flex;
@@ -61,6 +81,7 @@ nav {
   border-bottom: solid 2px var(--dark-gray-color);
   top: 0;
   position: sticky;
+  background-color: white;
 
   .logo {
     font-family: "KoHo";
@@ -126,7 +147,7 @@ nav {
     color: rgb(85, 83, 83);
   }
 
-  .btn-holder{
+  .btn-holder {
     margin-top: 20px;
     margin-bottom: 30px;
     display: flex;
@@ -135,13 +156,91 @@ nav {
     flex-wrap: wrap;
     gap: 15px;
   }
+}
 
-  
+/* project section  */
+.project-section {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1 {
+    margin: 0;
+    padding: 0;
+    font-family: "Funnel Sans";
+  }
+
+  p {
+    padding: 0;
+    font-family: "KoHo";
+    text-align: center;
+  }
+
+  .projects-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    text-decoration: none;
+    gap: 1.2rem;
+    align-items: center;
+    /* justify-content: center; */
+
+    .project {
+      width: 330px;
+      padding: 10px;
+      box-shadow:
+        rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+        rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+      corner-shape: squircle;
+      border-radius: 15px;
+      transition: all 0.3s;
+
+      img {
+        width: 330px;
+        corner-shape: squircle;
+        border-radius: 15px;
+      }
+
+      h2{
+        font-family: 'Funnel Sans';
+        color: black;
+        font-size: 1.3rem;
+      }
+
+      p{
+        font-family: 'Raleway';
+        color: black;
+        font-size: 0.9rem;
+      }
+
+      .tags-holder{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        p{
+          padding: 5px;
+          corner-shape: squircle;
+          border-radius: 10px;
+          background-color: black;
+          color: white;
+          /* gap: 10px; */
+        }
+      }
+    }
+
+    .project:hover{
+      transform: translateY(-20px);
+    }
+  }
 }
 
 /* scroll-down-animation */
 .mouse-scroll {
-  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family:
+    system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -171,13 +270,25 @@ nav {
   animation: fade 1.5s infinite;
 }
 @keyframes scroll {
-  0% { top: 10px; opacity: 1; }
-  100% { top: 30px; opacity: 0; }
+  0% {
+    top: 10px;
+    opacity: 1;
+  }
+  100% {
+    top: 30px;
+    opacity: 0;
+  }
 }
 @keyframes fade {
-  0% { opacity: 0; }
-  50% { opacity: 1; }
-  100% { opacity: 0; }
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 /* making shit responsive */
