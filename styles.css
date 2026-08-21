@@ -83,7 +83,8 @@ nav {
   border-bottom: solid 2px var(--dark-gray-color);
   top: 0;
   position: sticky;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.518);
+  backdrop-filter: blur(10px);
 
   .logo {
     font-family: "KoHo";
@@ -105,7 +106,8 @@ nav {
       padding: 5px 10px;
       corner-shape: squircle;
       border-radius: 20px;
-      background-color: white;
+      /* background-color: white; */
+      margin: -5px 0px;
     }
 
     a:hover {
@@ -310,8 +312,8 @@ nav {
     gap: 2rem;
 
     .message-holder {
-      h2{
-        font-family: 'Raleway';
+      h2 {
+        font-family: "Raleway";
         margin-bottom: 0;
       }
       .contact-form {
@@ -344,9 +346,9 @@ nav {
           font-size: 0.8rem;
         }
 
-        textarea{
+        textarea {
           height: 4rem;
-          font-family: 'Inter';
+          font-family: "Inter";
           margin-bottom: 1.5rem;
           border: none;
           box-shadow:
@@ -423,8 +425,13 @@ nav {
   }
 }
 
+/* bottom navigation bar  */
+.bottom-nav-bar {
+  display: none;
+}
+
 /* footer section  */
-footer{
+footer {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -432,7 +439,7 @@ footer{
   margin: 3rem 0;
   gap: 5px;
 
-  p{
+  p {
     margin: 0;
   }
 }
@@ -502,6 +509,13 @@ footer{
     }
   }
 
+  /* project section  */
+  .project-section{
+    .projects-container{
+      justify-content: center;
+    }
+  }
+
   /* skills section  */
   .skills-section {
     .skills-holder {
@@ -510,29 +524,62 @@ footer{
   }
 
   /* contact-section  */
-  .contact-section{
+  .contact-section {
     width: 95%;
 
-    .contact-holder{
+    .contact-holder {
       display: flex;
       flex-direction: column;
       align-items: center;
       width: 100%;
 
-      .message-holder{
+      .message-holder {
         width: 100%;
 
-        .contact-form{
-          input{
+        .contact-form {
+          input {
             margin-top: 5px;
           }
-          textarea{
+          textarea {
             margin-top: 5px;
           }
-          .name-email-holder{
+          .name-email-holder {
             display: flex;
             flex-direction: column;
           }
+        }
+      }
+    }
+  }
+
+  /* bottom navigation bar  */
+  .bottom-nav-bar {
+    display: flex;
+    bottom: 0;
+    left: 0;
+    padding: 0;
+    width: 100%;
+    border-top: solid 1.7px rgba(27, 31, 35, 0.15);
+    menu {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+      padding: 0 10px;
+      margin-top:10px;
+      margin-bottom: 5px;
+      a {
+        font-size: 1.7rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        P{
+          font-family: 'Inter';
+          font-size: 0.7rem;
+          margin: 0;
         }
       }
     }
